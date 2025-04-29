@@ -5,7 +5,7 @@ site_description: This is a template repository for Python projects that use Poe
 site_author: Andrew Kouré
 edit_uri: edit/main/docs/
 repo_name: ankoure/transitfeedhub-ingestor
-copyright: Maintained by <a href="https://ankoure.com">Florian</a>.
+copyright: Maintained by <a href="https://ankoure.com">Andrew</a>.
 
 nav:
   - Home: index.md
