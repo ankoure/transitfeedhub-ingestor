@@ -18,7 +18,12 @@ runs:
     - name: Install Poetry
       env:
         POETRY_VERSION: "2.1.2"
-      run: curl -sSL https://install.python-poetry.org | python - -y
+      run: pip install poetry==${POETRY_VERSION}
+      shell: bash
+
+    - name: Display Poetry Install Logs on Failure
+      if: failure()
+      run: cat /home/runner/work/transitfeedhub-ingestor/transitfeedhub-ingestor/poetry-installer-error-*.log || echo "No error log found."
       shell: bash
 
     - name: Add Poetry to Path
