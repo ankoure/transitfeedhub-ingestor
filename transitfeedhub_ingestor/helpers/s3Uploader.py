@@ -2,11 +2,12 @@ import io
 
 import boto3
 from botocore.exceptions import ClientError
+from mypy_boto3_s3.client import S3Client
 
 from .setup_logger import logger
 
 
-def upload_file(data: str, bucket: str, object_name: str):
+def upload_file(data: str, bucket: str, object_name: str) -> bool:
     """Upload data to an S3 bucket
 
     :param data: Data(Str) to upload
@@ -16,7 +17,7 @@ def upload_file(data: str, bucket: str, object_name: str):
     """
 
     # Upload the file
-    s3_client = boto3.client("s3")
+    s3_client: S3Client = boto3.client("s3")
 
     try:
         file_obj = io.BytesIO(data.encode("utf-8"))

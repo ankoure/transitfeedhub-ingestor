@@ -56,17 +56,18 @@ crt = ["botocore[crt] (>=1.21.0,<2.0a0)"]
 
 [[package]]
 name = "boto3-stubs"
-version = "1.38.5"
-description = "Type annotations for boto3 1.38.5 generated with mypy-boto3-builder 8.10.1"
+version = "1.38.7"
+description = "Type annotations for boto3 1.38.7 generated with mypy-boto3-builder 8.10.1"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev"]
+groups = ["main"]
 files = [
-    {file = "boto3_stubs-1.38.5-py3-none-any.whl", hash = "sha256:bce709424c2d56493457c1e4687d93e6dff28d197123fabec2cb11d06b0e5198"},
-    {file = "boto3_stubs-1.38.5.tar.gz", hash = "sha256:b02c6347f8f4dc69a9990b8a49de347a31d1de9db3f87dbcc3e5e94e93515520"},
+    {file = "boto3_stubs-1.38.7-py3-none-any.whl", hash = "sha256:1d3fbc6a3a79d1bf91da081c22a83797297d261190b4a36052aac4953425fb17"},
+    {file = "boto3_stubs-1.38.7.tar.gz", hash = "sha256:fda87e0ef0dbada1179b6bf563567ddf45d6d014c5d682d2b5db101263c2eb44"},
 ]
 
 [package.dependencies]
+boto3-stubs-full = {version = ">=1.38.0,<1.39.0", optional = true, markers = "extra == \"full\""}
 botocore-stubs = "*"
 types-s3transfer = "*"
 typing-extensions = {version = ">=4.1.0", markers = "python_version < \"3.12\""}
@@ -119,7 +120,7 @@ bedrock-data-automation-runtime = ["mypy-boto3-bedrock-data-automation-runtime (
 bedrock-runtime = ["mypy-boto3-bedrock-runtime (>=1.38.0,<1.39.0)"]
 billing = ["mypy-boto3-billing (>=1.38.0,<1.39.0)"]
 billingconductor = ["mypy-boto3-billingconductor (>=1.38.0,<1.39.0)"]
-boto3 = ["boto3 (==1.38.5)"]
+boto3 = ["boto3 (==1.38.7)"]
 braket = ["mypy-boto3-braket (>=1.38.0,<1.39.0)"]
 budgets = ["mypy-boto3-budgets (>=1.38.0,<1.39.0)"]
 ce = ["mypy-boto3-ce (>=1.38.0,<1.39.0)"]
@@ -483,6 +484,21 @@ workspaces-web = ["mypy-boto3-workspaces-web (>=1.38.0,<1.39.0)"]
 xray = ["mypy-boto3-xray (>=1.38.0,<1.39.0)"]
 
 [[package]]
+name = "boto3-stubs-full"
+version = "1.38.7"
+description = "All-in-one type annotations for boto3 1.38.7 generated with mypy-boto3-builder 8.10.1"
+optional = false
+python-versions = ">=3.8"
+groups = ["main"]
+files = [
+    {file = "boto3_stubs_full-1.38.7-py3-none-any.whl", hash = "sha256:6bd64665164708d2d18b823e4d57cb3da5ebd3dc448110c8de62a1666c7b54f8"},
+    {file = "boto3_stubs_full-1.38.7.tar.gz", hash = "sha256:c7843977ea880b0c807e61be019ed4a55762880e744594e4dec56f317e3d6ea3"},
+]
+
+[package.dependencies]
+typing-extensions = {version = "*", markers = "python_version < \"3.12\""}
+
+[[package]]
 name = "botocore"
 version = "1.38.5"
 description = "Low-level, data-driven core of boto 3."
@@ -511,7 +527,7 @@ version = "1.38.5"
 description = "Type annotations and code completion for botocore"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev"]
+groups = ["main"]
 files = [
     {file = "botocore_stubs-1.38.5-py3-none-any.whl", hash = "sha256:e5c3f6a7d1377b5f183848eab985bea71926df43b00e02ca36fb8a22e827af48"},
     {file = "botocore_stubs-1.38.5.tar.gz", hash = "sha256:560e193e39f2b153b0d64bc420a7e02f8a188f3f1c667b79a94bbf2ab56addc7"},
@@ -1759,7 +1775,7 @@ version = "0.26.1"
 description = "Type annotations and code completion for awscrt"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev"]
+groups = ["main"]
 files = [
     {file = "types_awscrt-0.26.1-py3-none-any.whl", hash = "sha256:176d320a26990efc057d4bf71396e05be027c142252ac48cc0d87aaea0704280"},
     {file = "types_awscrt-0.26.1.tar.gz", hash = "sha256:aca96f889b3745c0e74f42f08f277fed3bf6e9baa2cf9b06a36f78d77720e504"},
@@ -1771,7 +1787,7 @@ version = "0.12.0"
 description = "Type annotations and code completion for s3transfer"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev"]
+groups = ["main"]
 files = [
     {file = "types_s3transfer-0.12.0-py3-none-any.whl", hash = "sha256:101bbc5b7f00b71512374df881f480fc6bf63c948b5098ab024bf3370fbfb0e8"},
     {file = "types_s3transfer-0.12.0.tar.gz", hash = "sha256:f8f59201481e904362873bf0be3267f259d60ad946ebdfcb847d092a1fa26f98"},
@@ -1783,12 +1799,12 @@ version = "4.13.2"
 description = "Backported and Experimental Type Hints for Python 3.8+"
 optional = false
 python-versions = ">=3.8"
-groups = ["dev", "docs"]
+groups = ["main", "dev", "docs"]
 files = [
     {file = "typing_extensions-4.13.2-py3-none-any.whl", hash = "sha256:a439e7c04b49fec3e5d3e2beaa21755cadbbdc391694e28ccdd36ca4a1408f8c"},
     {file = "typing_extensions-4.13.2.tar.gz", hash = "sha256:e6c81219bd689f51865d9e372991c540bda33a0379d5573cddb9a3a23f7caaef"},
 ]
-markers = {docs = "python_version == \"3.9\""}
+markers = {main = "python_version < \"3.12\"", docs = "python_version == \"3.9\""}
 
 [[package]]
 name = "urllib3"
@@ -1920,4 +1936,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.9,<4.0"
-content-hash = "ee1dd5f0fd75a1490f5787b812028336133f35d205c6781de3d1d6f55d23cf11"
+content-hash = "dad0ed84d3747dfcd3ae88db61373d233faada104b9e4233526620c55690b306"
